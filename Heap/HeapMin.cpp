@@ -8,13 +8,13 @@ protected:
 	int* H;
 
 public:
-	HeapMin(int i = 0);
-	~HeapMin(void);
+	HeapMin(int i = 0); //конструктор
+	~HeapMin(void); //деструктор
 
 	int Size() {
 		return size;
 	}
-
+	
 	void SiftUp(int i) {
 		while (i && H[i] < H[(i - 1) / 2]) {
 			swap(H[i], H[(i - 1) / 2]);
@@ -59,11 +59,12 @@ public:
 		cout << endl;
 	}
 };
-
+// конструктор
 HeapMin::HeapMin(int i) : size(0), MaxSize(i), H(new int[MaxSize]) {
 	//cout << "HeapMin::HeapMin(int i)\n";
 }
 
+// деструктор
 HeapMin::~HeapMin() {
 	if (MaxSize) delete[]H;
 	//cout << "HeapMin::~HeapMin()\n";
@@ -77,6 +78,7 @@ int main() {
 		H.Insert(j);
 	}
 	H.Show();
+	
 	// Извлекем минимальный элемент, в итоге получаем отсортированный список
 	for (int i = 0; i < size; i++) {
 		j = H.ExtractMin();
