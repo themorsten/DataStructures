@@ -1,3 +1,6 @@
-append - добавление в конец 
+append - добавление в конец.
+1) Меняем указатель следующего элемента после конца с None на новый элемент
+2) Меняем указатель конца на новый элемент
 
-![TV - 1](https://github.com/themorsten/DataStructures/assets/75784716/12a088ff-8137-403b-b6ad-67fa56e1ef44)
+
+![TV - 1](https://github.com/themorsten/DataStructures/assets/75784716/be517249-b5aa-43cc-8b59-5a8ee7c6865c)
