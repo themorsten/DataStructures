@@ -32,3 +32,9 @@ class DoublyLinkedList:
     else:
       self.head = newNode
       self.tail = newNode
+
+  def print(self):
+    currentNode = self.head
+    while(currentNode):
+      print(currentNode.value)
+      currentNode = currentNode.next
