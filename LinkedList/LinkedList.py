@@ -9,7 +9,7 @@ class LinkedList: # связный список
     self.tail = None
 
   def append(self,value): # добавить в конец 
-    newNode = LinkedListNode(value) # создаем звено
+    newNode = LinkedListNode(value)
 
     if self.head: # список непустой 
       self.tail.next = newNode
@@ -29,6 +29,15 @@ class LinkedList: # связный список
     else: # список пустой
       self.head = newNode
       self.tail = newNode
+
+  def find(self,value): # поиск звена по значению val, возвращает указатель на звено или None
+    curNode = self.head
+    while(curNode):
+      if curNode.value == value:
+        return curNode
+      curNode = curNode.next
+    return None
+
       
   def print(self):
     currentNode = self.head
