@@ -10,7 +10,7 @@ class DoublyLinkedList:
     self.head = None
     self.tail = None
 
-  def append(self, value):
+  def append(self, value): # добавить в конец 
     newNode = DoublyLinkedListNode(value)
 
     if self.head: # список непустой
@@ -22,7 +22,7 @@ class DoublyLinkedList:
       self.head = newNode
       self.tail = newNode
 
-  def prepend(self, value):
+  def prepend(self, value): # добавить в начало
     newNode = DoublyLinkedListNode(value)
 
     if self.head: # список непустой
@@ -32,6 +32,19 @@ class DoublyLinkedList:
     else:
       self.head = newNode
       self.tail = newNode
+
+
+  def reverse(self): # разворот 
+    headNode = self.head
+    while(self.head):
+      prevNode = self.head.prev
+      nextNode = self.head.next
+      self.head.prev = nextNode
+      self.head.next = prevNode
+      self.head = nextNode
+
+    self.head = self.tail 
+    self.tail = headNode
 
   def print(self):
     currentNode = self.head
