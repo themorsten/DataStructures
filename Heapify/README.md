@@ -12,3 +12,4 @@ SiftDown запуститься только для первой половин�
 В итоге такой способ работает за O(n)
 
 В дальнейшем под Heapify будем иметь в виду HeapifyEnd (https://github.com/themorsten/DataStructures/blob/main/Heapify/HeapifyEnd.cpp)
+![Heapify](https://github.com/themorsten/DataStructures/assets/75784716/26dda8fe-5f14-4de5-9675-c614c102b701)
